@@ -1,0 +1,19 @@
+{% extends 'layouts/base.html' %}
+{% load static%}
+
+{% block title %}About{%endblock%}
+{%block content%}
+    <header class="container-about">
+        <section class="info">
+            <div class="text">
+                <h1>Hello, <span>I'm Mar!</span></h1>
+                <p>I’m a detail-oriented Python developer with a knack for building scalable and maintainable software. Dedicated to delivering exceptional results.</p>
+            </div>
+            <menu>
+                <a href="#"><i class="fa-brands fa-square-github"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </menu>
+        </section>
+        <div class="img-wrap"><img src="{% static 'assets/pfp.jpg' %}" alt="" class="profile-pic"></div>
+    </header>
+{%endblock%}

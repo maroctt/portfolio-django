@@ -1,0 +1,35 @@
+{% extends 'layouts/base.html' %} 
+{% load static %} 
+
+{% block title %}Projects{%endblock%}
+{%block content%}
+
+<header class="header">
+  <h3>Projects</h3>
+</header>
+  
+  <div class="container">
+    {% for project in projects%}
+
+      <article class="project">
+        <section>
+          <h3>{{project.title}}</h3>
+          <menu >
+            <a href="{{project.code}}">
+              <i class="fa-brands fa-github"></i>
+              Code
+            </a>
+            
+            <a href="{{project.demo}}">
+              <i class="fa-solid fa-link"></i>
+              Demo
+            </a>
+            
+          </menu>
+        </section>
+        <img src="{%static project.image%}" alt="" />
+      </article>
+
+    {%endfor%}
+  </div>
+{%endblock%}
